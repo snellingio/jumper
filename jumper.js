@@ -27,7 +27,7 @@
             deactivateAll();
         });
 
-        Mousetrap(element).bind(['esc'], function (e) {
+        Mousetrap(element).bind(['esc', '`'], function (e) {
             hide();
             return false;
         });
