@@ -1,6 +1,6 @@
 # jumper
 
-Demo: [https://snellingio.github.io/jumper/index.html](https://snellingio.github.io/jumper/index.html)
+[TRY THE DEMO](https://snellingio.github.io/jumper/index.html)
 
 A shameless css / js implementation of Slack / Basecamp jump menu.
 
