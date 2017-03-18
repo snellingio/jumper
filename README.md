@@ -1,6 +1,6 @@
 # jumper
 
-![][screenshot_220.png]
+![][/screenshot_220.png]
 
 ## License
 MIT
