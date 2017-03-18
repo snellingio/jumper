@@ -69,6 +69,10 @@
     }
 
     function show() {
+        Mousetrap.bind(['esc', '`'], function (e) {
+            hide();
+            return false;
+        });
         element = document.getElementById('jumper');
         activeIndex = 0;
         element.style.display = 'block';
@@ -78,6 +82,7 @@
     }
 
     function hide() {
+        Mousetrap.unbind(['esc', '`']);
         document.body.classList.remove('do-not-scroll');
         var elementById = document.getElementById('jumper');
         elementById.style.display = 'none';
