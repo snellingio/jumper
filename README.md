@@ -11,7 +11,7 @@ A shameless css / js implementation of Slack / Basecamp jump menu. Code is origi
     <code>cmd+j</code> on Mac to
     launch Jumper.</p>
 <p>
-    You can press <code>esc</code> to quit.
+    You can press <code>esc</code> or <code>`</code> to quit.
 </p>
 <br>
 
