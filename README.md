@@ -4,8 +4,6 @@ Demo: [https://snellingio.github.io/jumper/index.html](https://snellingio.github
 
 A shameless css / js implementation of Slack / Basecamp jump menu.
 
-![](screencap.png)
-
 ## How To Use
 <p>
     To launch the jump menu, press <code>ctrl+k</code> or <code>ctrl+j</code> on Windows, or
