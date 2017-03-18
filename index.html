@@ -1,0 +1,42 @@
+<link href="jumper.css" rel="stylesheet">
+<script src="jumper.dependencies.js" type="application/javascript"></script>
+<script src="jumper.js" type="application/javascript"></script>
+
+<style>
+    body {
+        font-family: sans-serif;
+        font-size: 14px;
+    }
+</style>
+
+<p>
+    Press <code>Ctrl+K</code> on Windows, or <code>Cmd+K</code> on Mac to launch Jumper. You can press <code>Esc</code>
+    to quit.
+</p>
+<p>
+    Want to theme it? Just add one style.
+<pre><code>
+#jumper .filter {
+    background-color: #242539;
+}
+</code></pre>
+</p>
+
+<div id="jumper">
+    <div class="filter">
+        <div class="search">
+            <input class="mousetrap" type="text" placeholder="Jump to..." autofocus="true" spellcheck="false"
+                   autocorrect="off">
+        </div>
+        <ul class="list">
+            <li><a class="index" href="https://google.com">Google</a></li>
+            <li><a class="index" href="https://github.com">Github</a></li>
+            <li><a class="index" href="https://news.ycombinator.com">Hacker News</a></li>
+            <li><a class="index" href="https://reddit.com">Reddit</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    Jump(4);
+</script>

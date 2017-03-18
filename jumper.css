@@ -1,0 +1,80 @@
+#jumper {
+    animation: scale-fade-in 0.2s ease-in-out;
+    position: fixed;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .4);
+    display: none;
+}
+
+#jumper a {
+    text-decoration: none;
+    background: transparent;
+    line-height: 30px;
+    font-size: 18px;
+    color: #fff;
+    margin: 8px 0;
+    padding: 2px 22px 2px;
+    border-radius: 5px;
+    overflow-x: hidden;
+    display: block;
+}
+
+#jumper a:hover, #jumper a:focus, #jumper a.active {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#jumper .filter {
+    background-color: #007D82;
+    max-width: 600px;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
+    width: 500px;
+    padding: 10px 10px 0 10px;
+    border-radius: 6px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 180px auto 0 auto;
+    display: block;
+}
+
+#jumper .search {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 6px 0;
+}
+
+#jumper .search input {
+    background-color: transparent;
+    outline: none;
+    font-size: 28px;
+    width: calc(100% - 40px);
+    border: 0;
+    margin: 0 20px;
+    color: #fff;
+}
+
+#jumper ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#jumper .search input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+#jumper .search input:-moz-placeholder {
+    color: #B8AED3 !important;
+}
+
+#jumper .search input::-moz-placeholder {
+    color: #B8AED3 !important;
+}
+
+#jumper .search input:-ms-input-placeholder {
+    color: #B8AED3 !important;
+}
