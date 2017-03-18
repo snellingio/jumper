@@ -2,7 +2,7 @@
 
 [TRY THE DEMO](https://snellingio.github.io/jumper/index.html)
 
-A shameless css / js implementation of Slack / Basecamp jump menu.
+A shameless css / js implementation of Slack / Basecamp jump menu. Code is original.
 
 ## How To Use
 <p>
