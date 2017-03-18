@@ -18,6 +18,7 @@
 
     function bind() {
         Mousetrap.bind(['command+k', 'ctrl+k', 'command+j', 'ctrl+j'], function (e) {
+            deactivateAll();
             show();
             return false;
         });
