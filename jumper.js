@@ -74,9 +74,11 @@
         element.style.display = 'block';
         element.getElementsByClassName('mousetrap')[0].focus();
         element.getElementsByTagName('a')[0].classList.add('active');
+        document.body.classList.add('do-not-scroll');
     }
 
     function hide() {
+        document.body.classList.remove('do-not-scroll');
         var elementById = document.getElementById('jumper');
         elementById.style.display = 'none';
         activeIndex = 0;

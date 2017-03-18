@@ -1,17 +1,20 @@
-<link href="jumper.css" rel="stylesheet">
-<script src="jumper.dependencies.js" type="application/javascript"></script>
-<script src="jumper.js" type="application/javascript"></script>
+<html>
+<head>
+    <link href="jumper.css" rel="stylesheet">
+    <script src="jumper.dependencies.js" type="application/javascript"></script>
+    <script src="jumper.js" type="application/javascript"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 14px;
+        }
 
-<style>
-    body {
-        font-family: sans-serif;
-        font-size: 14px;
-    }
-
-    .red {
-        color: red;
-    }
-</style>
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
 
 <p>
     To launch the jump menu, press <code class="red">ctrl+k</code> or <code class="red">ctrl+j</code> on Windows, or
@@ -95,9 +98,9 @@
 <div id="jumper">
     <div class="filter">
         <div class="help">
-            <strong>tab</strong>&nbsp; or &nbsp;<strong>↑</strong> <strong>↓</strong>&nbsp; to navigate
-            &nbsp;&nbsp;&nbsp;&nbsp;<strong>↵</strong>&nbsp; to select
-            &nbsp;&nbsp;&nbsp;&nbsp;<strong>esc</strong>&nbsp; to dismiss
+            <strong>tab</strong><strong>↑</strong> <strong>↓</strong> to navigate
+            &nbsp;&nbsp;&nbsp;&nbsp;<strong>↵</strong> to select
+            &nbsp;&nbsp;&nbsp;&nbsp;<strong>esc</strong> to dismiss
         </div>
         <div class="search">
             <input class="mousetrap" type="text" placeholder="Jump to..." autofocus="true" spellcheck="false"
@@ -115,3 +118,6 @@
 <script>
     Jump(4);
 </script>
+
+</body>
+</html>

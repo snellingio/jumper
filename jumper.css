@@ -30,9 +30,8 @@
 
 #jumper .filter {
     background-color: #007D82;
-    max-width: 600px;
+    max-width: 500px;
     box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
-    width: 500px;
     padding: 10px 10px 0 10px;
     border-radius: 6px;
     overflow-x: hidden;
@@ -83,4 +82,8 @@
     font-size: 14px;
     color: rgba(255, 255, 255, 0.4) !important;
     padding: 2px 22px 8px;
+}
+
+.do-not-scroll {
+    overflow: hidden !important;
 }
