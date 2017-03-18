@@ -75,5 +75,8 @@ A shameless css / js implementation of Slack / Basecamp jump menu. Code is origi
 </p>
 <br>
 
+## Dependencies
+There is a dependencies file at [jumper.dependencies.js](jumper.dependencies.js). It includes [listjs](http://listjs.com/) and [mousetrap](https://craig.is/killing/mice).
+
 ## License
 [MIT](LICENSE)
