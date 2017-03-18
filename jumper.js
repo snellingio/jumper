@@ -17,7 +17,7 @@
     }
 
     function bind() {
-        Mousetrap.bind(['command+k', 'ctrl+k'], function (e) {
+        Mousetrap.bind(['command+k', 'ctrl+k', 'command+j', 'ctrl+j'], function (e) {
             show();
             return false;
         });
@@ -31,7 +31,7 @@
             return false;
         });
 
-        Mousetrap(element).bind(['up', 'ctrl+tab'], function (e) {
+        Mousetrap(element).bind(['up'], function (e) {
             var numberOfResults = size();
             var previousIndex = activeIndex;
             if (activeIndex === 0) {
@@ -82,7 +82,7 @@
     }
 
     function size() {
-        return list.size();
+        return element.getElementsByTagName('a').length;
     }
 
     function activate(index) {

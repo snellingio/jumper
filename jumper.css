@@ -78,3 +78,9 @@
 #jumper .search input:-ms-input-placeholder {
     color: #B8AED3 !important;
 }
+
+#jumper .help {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4) !important;
+    padding: 2px 22px 8px;
+}
