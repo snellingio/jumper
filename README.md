@@ -2,22 +2,22 @@
 
 Demo: [https://snellingio.github.io/jumper/index.html](https://snellingio.github.io/jumper/index.html)
 
-A css / js implementation of slack / basecamp jump menu.
+A shameless css / js implementation of Slack / Basecamp jump menu.
 
-![](https://raw.githubusercontent.com/snellingio/jumper/master/screencap.png)
+![](screencap.png)
 
-
+## How To Use
 <p>
-    To launch the jump menu, press <code class="red">ctrl+k</code> or <code class="red">ctrl+j</code> on Windows, or
-    <code class="red">cmd+k</code> or
-    <code class="red">cmd+j</code> on Mac to
+    To launch the jump menu, press <code>ctrl+k</code> or <code>ctrl+j</code> on Windows, or
+    <code>cmd+k</code> or
+    <code>cmd+j</code> on Mac to
     launch Jumper.</p>
 <p>
-    You can press <code class="red">esc</code> to quit.
+    You can press <code>esc</code> to quit.
 </p>
 <br>
 
-
+## Install
 <p>
     First, include the dependencies:
 <pre><code>&lt;link href="jumper.css" rel="stylesheet"&gt;
@@ -78,4 +78,4 @@ A css / js implementation of slack / basecamp jump menu.
 <br>
 
 ## License
-MIT
+[MIT](LICENSE)
