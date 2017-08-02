@@ -1,5 +1,4 @@
 #jumper {
-    animation: scale-fade-in 0.2s ease-in-out;
     position: fixed;
     z-index: 10;
     height: 100%;
@@ -7,7 +6,7 @@
     left: 0;
     top: 0;
     background: rgba(0, 0, 0, .4);
-    display: none;
+    visibility: hidden;
 }
 
 #jumper a {
@@ -86,4 +85,43 @@
 
 .do-not-scroll {
     overflow: hidden !important;
+}
+
+.animated {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.zoomIn {
+    animation-name: zoomIn;
+}
+
+@keyframes zoomOut {
+    from {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.zoomOut {
+    animation-name: zoomOut;
 }

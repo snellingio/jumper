@@ -13,26 +13,47 @@
             page: size
         });
 
-        bind();
+        bindGlobal();
     }
 
-    function bind() {
+    function bindGlobal() {
+        element.addEventListener('click', function () {
+            event.stopPropagation();
+            hide();
+        });
+
+        element.getElementsByClassName('filter')[0].addEventListener('click', function () {
+            event.stopPropagation();
+        });
+
+
         Mousetrap.bind(['command+k', 'ctrl+k', 'command+j', 'ctrl+j'], function (e) {
             deactivateAll();
             show();
             return false;
         });
 
-        Mousetrap(element).bind(['backspace'], function (e) {
+
+        list.on('searchComplete', function () {
+            var activeElements = document.querySelectorAll('#' + id + ' .active');
+            if (activeElements.length !== 1) {
+                deactivateAll();
+            }
+        });
+    }
+
+    function bindShow() {
+
+        Mousetrap.bind(['backspace'], function (e) {
             deactivateAll();
         });
 
-        Mousetrap(element).bind(['esc', '`'], function (e) {
+        Mousetrap.bind(['esc', '`'], function (e) {
             hide();
             return false;
         });
 
-        Mousetrap(element).bind(['up'], function (e) {
+        Mousetrap.bind(['up'], function (e) {
             var numberOfResults = size();
             var previousIndex = activeIndex;
             if (activeIndex === 0) {
@@ -45,7 +66,7 @@
             return false;
         });
 
-        Mousetrap(element).bind(['down', 'tab'], function (e) {
+        Mousetrap.bind(['down', 'tab'], function (e) {
             var numberOfResults = size();
             var previousIndex = activeIndex;
             if ((activeIndex + 1) >= numberOfResults) {
@@ -58,13 +79,9 @@
             return false;
         });
 
-        Mousetrap(element).bind(['enter'], function (e) {
+        Mousetrap.bind(['enter'], function (e) {
             element.getElementsByTagName('a')[activeIndex].click();
             return false;
-        });
-
-        list.on('searchComplete', function () {
-            deactivateAll();
         });
     }
 
@@ -73,19 +90,27 @@
             hide();
             return false;
         });
+        bindShow();
         element = document.getElementById('jumper');
         activeIndex = 0;
-        element.style.display = 'block';
+        element.style.visibility = 'visible';
+        element.getElementsByClassName('filter')[0].classList.remove('animated', 'zoomOut');
+        element.getElementsByClassName('filter')[0].classList.add('animated', 'zoomIn');
         element.getElementsByClassName('mousetrap')[0].focus();
         element.getElementsByTagName('a')[0].classList.add('active');
         document.body.classList.add('do-not-scroll');
     }
 
     function hide() {
-        Mousetrap.unbind(['esc', '`']);
+        Mousetrap.unbind(['esc', '`', 'backspace', 'up', 'down', 'tab', 'enter']);
         document.body.classList.remove('do-not-scroll');
-        var elementById = document.getElementById('jumper');
-        elementById.style.display = 'none';
+        var element = document.getElementById('jumper');
+        element.getElementsByClassName('filter')[0].classList.remove('animated', 'zoomIn');
+        element.getElementsByClassName('filter')[0].classList.add('animated', 'zoomOut');
+        setTimeout(function () {
+            var element = document.getElementById('jumper');
+            element.style.visibility = 'hidden';
+        }, 100);
         activeIndex = 0;
     }
 
